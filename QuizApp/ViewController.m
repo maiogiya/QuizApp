@@ -22,30 +22,30 @@ int question = 0;
         self.textLabel.text = @"Right!";
         self.circle.hidden = YES;
         self.cross.hidden = YES;
-        self.next.hidden = 0;
+        self.next.hidden = NO;
         correct = 1;
     }else if (question == 1){
         self.textLabel.text = @"Right!";
         self.circle.hidden = YES;
         self.cross.hidden = YES;
-        self.next.hidden = 0;
+        self.next.hidden = NO;
         correct ++;
     }else if (question == 2){
         self.textLabel.text = @"No! Wrong!";
         self.circle.hidden = YES;
         self.cross.hidden = YES;
-        self.next.hidden = 0;
+        self.next.hidden = NO;
     }else if (question == 3){
         self.textLabel.text = @"Right!";
         self.circle.hidden = YES;
         self.cross.hidden = YES;
-        self.next.hidden = 0;
+        self.next.hidden = NO;
         correct ++;
     }else if (question == 4){
         self.textLabel.text = @"No! Wrong!";
         self.circle.hidden = YES;
         self.cross.hidden = YES;
-        self.next.hidden = 0;
+        self.next.hidden = NO;
     };
 }
 
@@ -54,28 +54,28 @@ int question = 0;
         self.textLabel.text = @"No! Wrong!";
         self.circle.hidden = YES;
         self.cross.hidden = YES;
-        self.next.hidden = 0;
+        self.next.hidden = NO;
     }else if (question == 1){
         self.textLabel.text = @"No! Wrong!";
         self.circle.hidden = YES;
         self.cross.hidden = YES;
-        self.next.hidden = 0;
+        self.next.hidden = NO;
     }else if (question == 2){
         self.textLabel.text = @"Right!";
         self.circle.hidden = YES;
         self.cross.hidden = YES;
-        self.next.hidden = 0;
+        self.next.hidden = NO;
         correct ++;
     }else if (question == 3){
         self.textLabel.text = @"No! Wrong!";
         self.circle.hidden = YES;
         self.cross.hidden = YES;
-        self.next.hidden = 0;
+        self.next.hidden = NO;
     }else if (question == 4){
         self.textLabel.text = @"Right!";
         self.circle.hidden = YES;
         self.cross.hidden = YES;
-        self.next.hidden = 0;
+        self.next.hidden = NO;
         correct ++;
     };
 }
@@ -83,39 +83,38 @@ int question = 0;
 -(IBAction)NextQuestion:(id)sender{
     if(question == 0){
         self.textLabel.text = @"Takeshita street have to Harajuku.";
-        self.circle.hidden = 0;
-        self.cross.hidden = 0;
+        self.circle.hidden = NO;
+        self.cross.hidden = NO;
         self.next.hidden = YES;
         question ++;
     }else if (question == 1){
         self.textLabel.text = @"Tokyo Tower is the best new.";
-        self.circle.hidden = 0;
-        self.cross.hidden = 0;
+        self.circle.hidden = NO;
+        self.cross.hidden = NO;
         self.next.hidden = YES;
         question ++;
     }else if (question == 2){
         self.textLabel.text = @"There is Odaiba in Ferris wheel.";
-        self.circle.hidden = 0;
-        self.cross.hidden = 0;
+        self.circle.hidden = NO;
+        self.cross.hidden = NO;
         self.next.hidden = YES;
         question ++;
     }else if (question == 3){
         self.textLabel.text = @"Disneyland is in Setagaya.";
-        self.circle.hidden = 0;
-        self.cross.hidden = 0;
+        self.circle.hidden = NO;
+        self.cross.hidden = NO;
         self.next.hidden = YES;
         question ++;
     }else if (question == 4){
-        self.textLabel.text = [NSString stringWithFormat:@"Finish!\n%2d/5",correct];
+        //NSLog(@"%d", correct / 5 * 100);
+        float floatNum = correct;
+        int result = floor(floatNum / 5 * 100);
+        self.textLabel.text = [NSString stringWithFormat:@"Finish!\n%d％",result];
         self.circle.hidden = YES;
         self.cross.hidden = YES;
         self.next.hidden = YES;
     };
 }
-
-//配列 or if文
-
-//正答率割る方で
 
 - (void)viewDidLoad {
     [super viewDidLoad];
