@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Capital of Japan is in Tokyo." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gvw-ab-T6Y">
+                                <rect key="frame" x="11" y="71" width="298" height="99"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4c-yz-fjq">
+                                <rect key="frame" x="40" y="249" width="100" height="100"/>
+                                <state key="normal" image="ok.png"/>
+                                <connections>
+                                    <action selector="CorrectAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZlL-nD-x6C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqB-Zw-d9u">
+                                <rect key="frame" x="180" y="249" width="100" height="100"/>
+                                <state key="normal" image="ng.png"/>
+                                <connections>
+                                    <action selector="IncorrectAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6yf-sk-ZjG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYm-8y-dlh">
+                                <rect key="frame" x="107" y="184" width="107" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Next→"/>
+                                <connections>
+                                    <action selector="NextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cRb-Ul-sQT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97236032196969702" green="0.97236032196969702" blue="0.97236032196969702" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="circle" destination="F4c-yz-fjq" id="Tqq-bj-L9s"/>
+                        <outlet property="cross" destination="jqB-Zw-d9u" id="U0I-QU-9x8"/>
+                        <outlet property="next" destination="BYm-8y-dlh" id="ypc-3g-cdJ"/>
+                        <outlet property="textLabel" destination="gvw-ab-T6Y" id="yTI-by-zrs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ng.png" width="240" height="240"/>
+        <image name="ok.png" width="240" height="240"/>
+    </resources>
+</document>
